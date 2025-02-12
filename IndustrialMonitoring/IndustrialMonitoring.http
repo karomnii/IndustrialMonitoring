@@ -1,0 +1,17 @@
+@host = http://localhost:5078
+
+###
+GET {{host}}/api/SensorReadings
+accept: application/json
+
+###
+POST {{host}}/api/SensorReadings
+content-type: application/json
+
+{
+    "sensorId": "TEMP_001",
+    "value": 25.5,
+    "unit": "°C",
+    "location": "Production Line 1",
+    "isActive": true
+}
